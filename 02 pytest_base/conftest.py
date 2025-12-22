@@ -34,3 +34,6 @@ def non_parametrized_username(request):
     return 'username'
 
 
+def pytest_runtest_call(item):
+    print('运行前验证')
+

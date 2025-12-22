@@ -5,7 +5,9 @@
 
 
 class Globals(object):
-
+    test_data = {}
+    case_path = None
+    case_name = 'not make value'
     admin_portal = {
         'Content-Type': 'application/json',
         "bank-admin-token": None,

@@ -1,0 +1,9 @@
+#case 1
+
+#case 2 post demo
+test_params_query:
+  step_post_demo:
+    name: John Doe
+    age: 30
+    email: john@example.com
+    hobbies: ['reading', 'gaming']

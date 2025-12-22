@@ -64,6 +64,10 @@ class TestParamManagement(Stepseesion,StepParamManagement):
         print( response.json()['data'])
 
 
-    def test_params_query2(self,get_hearder):
+    def test_params_query2(self):
         self.step_login()
         self.step_query_param_view()
+
+    def test_post_demo(self):
+        self.step_post_demo(set_param = 'step_post_demo')
+
