@@ -2,6 +2,7 @@
 
 from step.commom.FileUtil import FileUtil
 
+import yaml
 
 class YamlUtil():
 
@@ -12,12 +13,11 @@ class YamlUtil():
         :param path: file path - relative to root directory
         :return: file content
         """
-        # real_path = FileUtil.get_abspath(path)
-        # with open(real_path, mode='r', encoding='utf-8') as f:
-        #     if f is None:
-        #         # raise OpenFileException(real_path
-        #         raise Exception
-        #     data = yaml.load(stream=f, Loader=yaml.FullLoader)
-        #     f.close()
-        #     return data
-    pass
+        real_path = FileUtil.get_abspath(path)
+        with open(real_path, mode='r', encoding='utf-8') as f:
+            if f is None:
+                # raise OpenFileException(real_path
+                raise Exception
+            data = yaml.load(stream=f, Loader=yaml.FullLoader)
+            f.close()
+            return data

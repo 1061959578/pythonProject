@@ -65,8 +65,8 @@ class TestParamManagement(Stepseesion,StepParamManagement):
 
 
     def test_params_query2(self):
-        self.step_login()
-        self.step_query_param_view()
+        self.step_login(set_param = 'step_login')
+        self.step_query_param_view(set_param='step_query_param_view')
 
     def test_post_demo(self):
         self.step_post_demo(set_param = 'step_post_demo')

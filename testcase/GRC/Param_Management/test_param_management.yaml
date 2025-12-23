@@ -1,7 +1,12 @@
 #case 1
-
+test_params_query2:
+  step_login:
+    password: 5AEA19BDBF0350E6028DFFF43FAD46C7
+    userId: reviewer1
+  step_query_param_view:
+    moduleNameList: ['Incident Management']
 #case 2 post demo
-test_params_query:
+test_post_demo:
   step_post_demo:
     name: John Doe
     age: 30

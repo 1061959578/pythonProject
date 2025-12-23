@@ -1,3 +1,4 @@
+import json
 from pathlib import Path
 
 
@@ -12,7 +13,17 @@ class FileUtil():
         return str(Path.joinpath(BASE_DIR, path))
 
 
-    pass
+    @classmethod
+    def read_file_json(cls, path: str):
+        with open(path, mode='r', encoding='utf-8') as f:
+            try:
+                data = json.load(f)
+                f.close()
+                return data
+            except Exception:
+                raise Exception('Failed to read json file: %s' % path)
+
+
 
 if __name__ == '__main__':
     CURRENT = Path(__file__)

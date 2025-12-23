@@ -6,6 +6,7 @@
 
 class Globals(object):
     test_data = {}
+    case_data = {}
     case_path = None
     case_name = 'not make value'
     admin_portal = {

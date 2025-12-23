@@ -24,12 +24,12 @@ class StepPortal():
     def parse_param_data(self,set_param):
 
         if set_param and not set_param.startswith("$."):
-            selector = '.'.join(['$', Globals.case_name, set_param])
-        print(selector)
+            set_param = '.'.join(['$', Globals.case_name, set_param])
 
         try:
-            step_data = copy.deepcopy(jsonpath.jsonpath(Globals.test_data,set_param))
-            print(step_data)
+            step_data = copy.deepcopy(jsonpath.jsonpath(Globals.test_data,set_param)[0])
         except:
             raise Exception('Not found %s' % set_param)
-        pass
+        return  copy.deepcopy(step_data)
+
+    # 处理参考数据
