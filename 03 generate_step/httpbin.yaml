@@ -1,0 +1,15 @@
+httpbinpost:
+  yapi:
+  url: /post
+  desc: httpbin.org/post接口联系
+  method: POST
+  headers:
+    Content-Type: application/json
+  input:
+    name:    #"SparkSQL"
+    age:
+    email:    #"\nselect 1"
+    hobbies:
+  output:
+    json:         #0,
+    data:

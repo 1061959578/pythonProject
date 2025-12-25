@@ -47,6 +47,7 @@ class Test_base_request():
             'hobbies': ['reading', 'gaming']
         }
         url = 'https://httpbin.org/post'
+
         response = requests.post(url, json=json_data)
         assert response.status_code == 200
 
