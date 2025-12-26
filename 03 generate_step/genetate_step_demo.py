@@ -16,13 +16,25 @@ class GenerateStepDemo:
     pass
 
     def traversal_api_file(self):
+        # 获取模板文件
         current_dir = os.path.dirname(os.path.realpath(__file__))
-        file_name = 'httpbin.yaml'
-        file = current_dir + file_name
-        with open(file, 'r',encoding='utf-8') as f:
-            tmpl = Template(f.read())
+        template_file = current_dir + '\\' + 'Step.template'
+        with open(template_file, 'r',encoding='utf-8') as f_tp:
+            tmpl = Template(f_tp.read())
+            f_tp.close()
 
+        # 生成step
+        file_name = 'httpbin.yaml'
+        step_file = 'Step_demo.py'
+
+
+        with open(step_file, 'a',encoding='utf-8') as f_step:
+            lines = f_step.write(tmpl.substitute(PROTOCOL_PATH=file_name,CLASS_NAME=file_name.replace('.yaml','')))
+            f_step.close()
         pass
+
+
+    # 获取对应yaml文件的数据
     # 获取对应yaml文件的数据
     # 获取step文件模板
     # 根据对应数据生成step文件
