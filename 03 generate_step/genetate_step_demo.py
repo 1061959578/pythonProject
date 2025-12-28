@@ -20,7 +20,7 @@ class GenerateStepDemo:
     def traversal_api_file(self):
         # 获取模板文件
         current_dir = os.path.dirname(os.path.realpath(__file__))
-        template_file = current_dir + '\\' + 'Step.template'
+        template_file = current_dir + '\\' + 'Class.template'
         with open(template_file, 'r',encoding='utf-8') as f_tp:
             tmpl = Template(f_tp.read())
             f_tp.close()

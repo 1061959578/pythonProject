@@ -3,7 +3,7 @@ from pathlib import Path
 
 
 CURRENT = Path(__file__)
-BASE_DIR = CURRENT.parent.parent.parent
+BASE_DIR = CURRENT.parent.parent
 
 class FileUtil():
 
@@ -27,5 +27,5 @@ class FileUtil():
 
 if __name__ == '__main__':
     CURRENT = Path(__file__)
-    BASE_DIR = CURRENT.parent.parent.parent
+    BASE_DIR = CURRENT.parent.parent
     print(BASE_DIR)

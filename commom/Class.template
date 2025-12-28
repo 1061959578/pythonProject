@@ -1,0 +1,9 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+from commom.YamlUtil import YamlUtil
+
+protocol = YamlUtil.read_conf_yaml('${PROTOCOL_PATH}')
+
+
+class Step${CLASS_NAME}(StepPortal):
