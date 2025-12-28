@@ -4,7 +4,7 @@
 import pytest
 import requests
 from step.GRC.Param_Management.step_param_management import StepParamManagement
-from step.commom.StepSeesion import Stepseesion
+from commom.StepSeesion import Stepseesion
 
 class TestParamManagement(Stepseesion,StepParamManagement):
 

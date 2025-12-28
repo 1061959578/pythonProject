@@ -1,10 +1,8 @@
 # conding: utf-8
 # @Time : 2025/12/22下午3:33
 # @Author : shiqing.duan
-import requests
 from Globals import Globals
-from step.commom.YamlUtil import YamlUtil
-from step.commom.StepPortal import StepPortal
+from commom.StepPortal import StepPortal
 
 
 # protocol = YamlUtil.read_conf_yaml('protocol/DBP/data_workbench_v0926/SpaceFileManagement.yml')

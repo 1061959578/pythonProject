@@ -1,11 +1,9 @@
 # conding: utf-8
 # @Time : 2025/12/22下午4:33
 # @Author : shiqing.duan
-import json
 
-import requests
 from Globals import Globals
-from step.commom.StepPortal import StepPortal
+from commom.StepPortal import StepPortal
 
 class Stepseesion(StepPortal):
     def step_login(self,set_param = None):

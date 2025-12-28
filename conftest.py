@@ -4,8 +4,8 @@ import os
 import pytest
 
 from Globals import Globals
-from step.commom.FileUtil import FileUtil
-from step.commom.YamlUtil import YamlUtil
+from commom.FileUtil import FileUtil
+from commom.YamlUtil import YamlUtil
 
 
 def pytest_runtest_call(item):

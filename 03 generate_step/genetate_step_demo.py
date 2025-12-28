@@ -4,7 +4,7 @@
 import os
 from string import Template
 
-from step.commom.YamlUtil import YamlUtil
+from commom.YamlUtil import YamlUtil
 
 step_tmp = Template('''
     def step_${PROTOCOL}(self, selector=None):
