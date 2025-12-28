@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from common.utils.YamlUtil import YamlUtil
-from step.DBP.admin_portal.StepPortal import StepPortal
+from step.commom.YamlUtil import YamlUtil
+from step.commom.StepPortal import StepPortal
 
 protocol = YamlUtil.read_conf_yaml('${PROTOCOL_PATH}')
 

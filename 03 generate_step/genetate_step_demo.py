@@ -4,6 +4,8 @@
 import os
 from string import Template
 
+from step.commom.YamlUtil import YamlUtil
+
 step_tmp = Template('''
     def step_${PROTOCOL}(self, selector=None):
         protocol_data, step_data = self.parse_protocol_and_data(protocol, '$.${PROTOCOL}', selector)
@@ -33,11 +35,35 @@ class GenerateStepDemo:
             f_step.close()
         pass
 
+        pro_path = current_dir + '\\' + 'httpbin.yaml'
+        pros = YamlUtil.read_conf_yaml(pro_path)
+        for protocol_name in pros.keys():
+            with open(step_file,'a',encoding='utf-8') as f_step:
+                lines = []
+                protocal_name = self.__format_string(protocol_name)
+                print(protocal_name)
+                lines.append(step_tmp.safe_substitute(PROTOCOL=protocol_name))
+                f_step.writelines(lines)
+                f_step.write('\n')
+                f_step.close()
+
 
     # 获取对应yaml文件的数据
     # 获取对应yaml文件的数据
     # 获取step文件模板
     # 根据对应数据生成step文件
+
+    def __format_string(self, value=None):
+        set_null = ' ,。，*!@#¥%&()（）、/\\'
+
+        for i in range(len(set_null)):
+            if set_null[i] in value:
+                value = value.replace(set_null[i], '')
+
+        value = value.replace('.py', '')
+        value = value.replace('-', '_')
+
+        return value
 
 if __name__ == '__main__':
     GenerateStepDemo().traversal_api_file()
