@@ -1,0 +1,5 @@
+    def step_${API}(self, selector=None):
+            api_data, step_data = self.parse_protocol_and_data(protocol, '$.${API}', selector)
+            res = self.call_api(step_data)
+            self.update_and_assert_data(selector, res)
+            return res

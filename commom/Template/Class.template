@@ -3,7 +3,7 @@
 
 from commom.YamlUtil import YamlUtil
 
-protocol = YamlUtil.read_conf_yaml('${PROTOCOL_PATH}')
+protocol = YamlUtil.read_conf_yaml('${APIINFO_FILE}')
 
 
 class Step${CLASS_NAME}(StepPortal):
